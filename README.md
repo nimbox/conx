@@ -83,7 +83,7 @@ A command line utility to develop and test nimbox connectors.
    command:
 
     ```bash
-    docker logs -f connector-serve
+    docker logs -f connector-server
     ```
 
 10. To terminate or restart the whole process, use the following commands:
