@@ -97,8 +97,12 @@ A command line utility to develop and test nimbox connectors.
     conx completion --help
     conx completion zsh --help
     ```
-    In OSX make sure your `~/.zshrc` starts with
+    In OSX make sure your `~/.zshrc` starts with:
     ```bash
     fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
     autoload -U compinit; compinit
+    ```
+    And that you execute:
+    ```bash
+    conx completion zsh > $(brew --prefix)/share/zsh/site-functions/_conx
     ```
