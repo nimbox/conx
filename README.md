@@ -38,12 +38,14 @@ A command line utility to develop and test nimbox connectors.
       "configuration": {
         "version": 1,
         "url": "jdbc:sqlserver://host.docker.internal;databaseName=CONNECTOR",
-        "currencies": { "RD$": "DOP" },
         "reader": {
           "username": "sa",
           "password": "Password1!"
         },
-        "renderer": "FREEMARKER"
+        "renderer": "FREEMARKER",
+        "database": {
+          "currencies": { "RD$": "DOP" },
+        "
       }
     }
     ```
