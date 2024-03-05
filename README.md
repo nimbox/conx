@@ -44,8 +44,8 @@ A command line utility to develop and test nimbox connectors.
         },
         "renderer": "FREEMARKER",
         "database": {
-          "currencies": { "RD$": "DOP" },
-        "
+          "currencies": { "RD$": "DOP" }
+        }
       }
     }
     ```
