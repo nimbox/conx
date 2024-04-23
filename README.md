@@ -52,7 +52,7 @@ A command line utility to develop and test nimbox connectors.
         currencies:
         - value: DOP
           patterns: 
-          - RD$
+          - RD\$
     ```
 
 4. Start the connector server with the following command:
