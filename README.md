@@ -18,36 +18,41 @@ A command line utility to develop and test nimbox connectors.
    `host.docker.internal` needs to be used in case there is a tunnel from the
    server running docker to the server hosting the remote database.
 
-    ```json
-    {
-      "business": {
-        "country": "DO",
-        "currency": "DOP",
-        "currencies": [ "USD", "EUR" ],
-        "locale": "es"
-      },
-      "connector": {
-        "streamer": {
-          "contacts": {
-            "representative": { "phones": 3, "emails": 1, "addresses": 0 },
-            "customer": { "phones": 3, "emails": 1, "addresses": 1 },
-            "customerContact": { "phones": 3, "emails": 3, "addresses": 1 }
-          }
-        }
-      },
-      "configuration": {
-        "version": 1,
-        "url": "jdbc:sqlserver://host.docker.internal;databaseName=CONNECTOR",
-        "reader": {
-          "username": "sa",
-          "password": "Password1!"
-        },
-        "renderer": "FREEMARKER",
-        "database": {
-          "currencies": { "RD$": "DOP" }
-        }
-      }
-    }
+    ```yaml
+    business:
+      country: DO
+      currency: DOP
+      currencies:
+      - USD
+      - EUR
+      locale: es
+    connector:
+      streamer:
+        contacts:
+          representative:
+            phones: 3
+            emails: 1
+            addresses: 0
+          customer:
+            phones: 3
+            emails: 1
+            addresses: 1
+          customerContact:
+            phones: 3
+            emails: 3
+            addresses: 1
+    configuration:
+      version: 1
+      url: jdbc:sqlserver://host.docker.internal;databaseName=CONNECTOR
+      reader:
+        username: sa
+        password: Password1!
+      renderer: FREEMARKER
+      database:
+        currencies:
+        - value: DOP
+          patterns: 
+          - RD$
     ```
 
 4. Start the connector server with the following command:
